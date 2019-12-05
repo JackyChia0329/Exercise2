@@ -23,8 +23,9 @@ class MainActivity : AppCompatActivity() {
 
             val KG =  kg.text.toString().toDouble()
             val CM = cm.text.toString().toInt()*0.01
+            val result =String.format ("%.2f",KG/(CM*CM))
 
-            bmi.setText((KG/(CM*CM)).toString())
+            bmi.setText(result)
             if((KG/(CM*CM))<18.5){
                 img.setImageResource(R.drawable.under)
 
